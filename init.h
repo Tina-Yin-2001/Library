@@ -26,4 +26,8 @@ const char defaultUserDataCsvPath[] = "..\\Library\\user_data.csv";   //定义�
 extern std::string admin_id;
 extern std::string admin_password;
 
+
+const int STUIDNUM = 11;     //学号长度
+const int TEAIDNUM = 6;     //工号长度
+
 #endif // INIT_H

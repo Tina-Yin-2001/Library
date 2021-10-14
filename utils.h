@@ -15,7 +15,7 @@ namespace utils {
 FILE* openfile(const char* filename, int size);
 QString Qstr2str(string str);
 string Qstr2str(QString str);
-bool judgenum(string str, int num);
+int judge(string str);
 
 
 //!!!大坑，template模板函数必须写在.h里，写在.cpp里会报错

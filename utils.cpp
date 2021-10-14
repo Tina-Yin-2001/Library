@@ -27,19 +27,34 @@ string Qstr2str(QString str) {
 }
 
 //判断string是否为num位数字
-bool judgenum(string str, int num) {
+int judge(string str) {
     int len = str.length();
-    if(len == num) {
+    if (str[0]=='#'){
+        return 0;
+    }
+    else if(len == STUIDNUM) {
         int i = 0;
         for(; i < len;) {
             if(isdigit(str[i]))
                 i++;
             else break;
         }
-        if (i != num)
-            return false;
-    } else return false;
-    return true;
+        if (i != STUIDNUM)
+            return -1;
+    }
+    else if(len== TEAIDNUM)
+    {
+        int i = 0;
+        for(; i < len;) {
+            if(isdigit(str[i]))
+                i++;
+            else break;
+        }
+        if (i != TEAIDNUM)
+            return -1;
+    }
+
+    return 1;
 }
 
 }
